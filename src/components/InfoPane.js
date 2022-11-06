@@ -39,11 +39,13 @@ const HolidayDigest = ({ name, date, digest, link, countries }) => {
 // Ex. intDayToDay(1) => "1st"
 //     intDayToDay(2) => "2nd"
 const intDayToDay = (i) => {
-	const lastDigit = i.toString().slice(-1);
-	const firstDigit = i.toString().charAt(0);
-	if (lastDigit == "1" && firstDigit != 1) return i + "st";
-	if (lastDigit == "2" && firstDigit != 1) return i + "nd";
-	if (lastDigit == "3" && firstDigit != 1) return i + "rd";
+	const iStr = i.toString();
+	const lastDigit = iStr.charAt(iStr.length - 1);
+	const firstDigit = iStr.charAt(0);
+	const not1xOr1Dig = firstDigit != 1 || iStr.length == 1;
+	if (lastDigit == "1" && not1xOr1Dig) return i + "st";
+	if (lastDigit == "2" && not1xOr1Dig) return i + "nd";
+	if (lastDigit == "3" && not1xOr1Dig) return i + "rd";
 	return i + "th";
 }
 
@@ -67,28 +69,21 @@ const datesToRanges = (date) => {
 	const dates = date.replaceAll("-", "")
 		.split(",")
 		.map(str => moment(str, "YYYYMMDD"));
-	// Generate ranges
-	const ranges = [];
-	let startRange = undefined;
-	dates.forEach((e, i) => {
-		if (startRange == undefined) {
-			startRange = e;
-		}
-		if (e.subtract(startRange) != moment(1, "days") || i == dates.length - 1) {
-			ranges.push({ start: startRange, end: e });
-			startRange = e;
-		}
-	});
-	console.log(dates)
-	return ranges;
+	return [{ start: dates[0], end: dates[dates.length - 1] }];
 }
 
 // Convert list of ranges to a string representation
 const dateRangesToString = (ranges) => {
 	return ranges.map(e => {
-		let res = intDayToDay(e.start.date()) + " of " + intMonthToMonth(e.start.month());
-		if (e.start != e.end)
-			res += " to the " + intDayToDay(e.end.date()) + " of " + intMonthToMonth(e.end.month());
-		return res;
+		const formatter = (e) => intDayToDay(e.date()) + " of " + intMonthToMonth(e.month());
+
+		if (e.start == e.end)
+			return formatter(e.start);
+		if (e.start.month() != e.end.month())
+			return formatter(e.start) + " to the " + formatter(e.end);
+
+		return intDayToDay(e.start.date()) + " to the "
+			+ intDayToDay(e.end.date())
+			+ " of " + intMonthToMonth(e.end.month());
 	}).reduce((curr, prev) => prev + ", " + curr);
 }
