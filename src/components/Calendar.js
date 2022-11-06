@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../App.css'
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid"
+import { data } from '../data/Data.js'
 
 export { Calendar }
 
@@ -12,9 +13,12 @@ export default class Calendar extends Component {
 			<FullCalendar
 				defaultView="dayGridMonth"
 				plugins={[dayGridPlugin]}
-				events={[
-					{ title: 'Christmas', date: '2022-12-25' }
-				]}
+				events={data.holidays.map(e => {
+					return {
+						title: e.name,
+						date: e.date
+					}
+				})}
 			/>
 		)
 	}

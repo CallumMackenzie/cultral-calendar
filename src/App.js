@@ -16,6 +16,7 @@ function App() {
 					gutterSize={10}
 					gutterAlign="center"
 					direction="horizontal"
+					allowResize="false"
 					cursor="col-resize">
 					<Calendar className="Calendar" />
 					<InfoPane className="InfoPane" />
