@@ -13,13 +13,17 @@ function App() {
 					<title>Cultral Calendar</title>
 				</Helmet>
 				<Layout>
-					<Split style={{ display: "flex" }}
+					<Split style={{
+						display: "flex",
+						width: "calc(100vw - 3rem)",
+						height: "calc(100vh - 4rem)"
+					}}
 						gutterSize={10}
 						gutterAlign="center"
 						direction="horizontal"
 						cursor="col-resize">
-						<Calendar className="Calendar" />
-						<InfoPane className="InfoPane" />
+						<Calendar />
+						<InfoPane />
 					</Split>
 				</Layout>
 			</header>
