@@ -39,10 +39,15 @@
 
 .InfoPane {
 	background-color: var(--cclyellow);
-	display: flex;
+	display: inline-block;
 	color: black;
 	border-radius: 1em;
 	padding: 1em;
+	text-align: center;
+}
+
+.Title span {
+	font-size: xx-large;
 }
 
 .Calendar {

@@ -1,30 +1,33 @@
-export { InfoPane }
 import { data } from "../data/Data";
+export { InfoPane }
 
 // Components:
 
 const InfoPane = () => {
 	return (<>
 		<div className="InfoPane">
-			<Title style/>
+			<Title />
 			{data.holidays.map(holiday => HolidayDigest(holiday))}
 		</div>
 	</>);
 }
 
-const Title = () => {
+const Title = ({ style }) => {
 	const today = new Date(),
 		d = today.getDate(),
-		m = today.getMonth() + 1,
+		m = today.getMonth(),
 		y = today.getFullYear();
 	return (<>
-		<h2>{intDayToDay(d)}</h2>
+		<div className="Title" style={style}>
+			<span>{intDayToDay(d)} of {intMonthToMonth(m)}, {y}</span>
+		</div>
 	</>);
 }
 
 const HolidayDigest = ({ name, date, digest, link }) => {
 	return (<>
-		<h3>{name}</h3>
+		<span>{name}</span>
+		<span></span>
 	</>);
 }
 
@@ -40,4 +43,12 @@ const intDayToDay = (i) => {
 		case 3: return "3rd";
 		default: return i + "th";
 	}
+}
+
+// Convert integer month to a string repersentation
+// Ex. intMonthToMonth(1) => "January"
+//     intMonthToMonth(3) => "March"
+const intMonthToMonth = (i) => {
+	return ["January", "February", "March", "April", "May", "June", "July",
+		"August", "September", "October", "November", "December"][i];
 }
