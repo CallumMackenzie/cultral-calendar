@@ -17,6 +17,13 @@ const data = {
 				countries: ["Canada"],
 				digest: "Holiday to celebrate love ... St.Valentine ... etc",
 				link: "https://www.valentine.com"
+			},
+			{
+				name: "Eric Day",
+				date: "2022-11-06",
+				countries: ["Canada"],
+				digest: "...",
+				link: "..."
 			}
 		]
 }

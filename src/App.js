@@ -11,7 +11,7 @@ function App() {
 				<Split style={{
 					display: "flex",
 					width: "calc(100vw - 3rem)",
-					height: "calc(100vh - 4rem)"
+					height: "100%",
 				}}
 					gutterSize={10}
 					gutterAlign="center"

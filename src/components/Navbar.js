@@ -3,10 +3,9 @@ export { Navbar }
 const Navbar = () => {
 	return (<>
 		<div style={{
-			position: "flex",
+			position: "relative",
 			top: 0,
-			position: "absolute",
-			width: "100%"
+			width: "100%",
 		}}>
 			<h2>Cultral Calendar</h2>
 		</div>
