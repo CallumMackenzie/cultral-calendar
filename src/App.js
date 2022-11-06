@@ -1,4 +1,5 @@
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
+import Split from 'react-split';
 import './App.css';
 
 function App() {
@@ -8,6 +9,14 @@ function App() {
 				<Helmet>
 					<title>Cultral Calendar</title>
 				</Helmet>
+				<Split>
+					<div className="Calendar">
+						<h2>TODO: ADD CALENDAR</h2>
+					</div>
+					<div className="InfoPane">
+						<h2>TODO: ADD INFO PANE</h2>
+					</div>
+				</Split>
 			</header>
 		</div>
 	);
