@@ -6,6 +6,11 @@
 	--ccgreen: #ADF7B6;
 }
 
+#root {
+	width: 100%;
+	height: 100%;
+}
+
 .App {
 	text-align: center;
 }
@@ -49,6 +54,7 @@
 .gutter {
 	background-repeat: no-repeat;
 	background-position: 50%;
+	padding: 5px;
 }
 
 .gutter.gutter-horizontal {
