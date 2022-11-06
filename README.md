@@ -1,4 +1,4 @@
-### CulturalCalendar
+### Cultural Calendar
 
 A calendar to view different upcoming cultural events and how to participate in them.
 
