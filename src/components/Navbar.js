@@ -29,8 +29,7 @@ const Navbar = () => {
 					width: "2em",
 					height: "2em",
 					paddingRight: "0.5em",
-				}}
-					src={github} alt="Github" />
+				}} src={github} alt="Github" />
 			</a>
 
 		</div>
