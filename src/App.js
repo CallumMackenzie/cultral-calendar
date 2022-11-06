@@ -1,5 +1,6 @@
 import { Calendar } from "./components/Calendar";
 import { Layout } from "./components/Layout"
+import { InfoPane } from "./components/InfoPane";
 import Split from 'react-split';
 import './App.css';
 

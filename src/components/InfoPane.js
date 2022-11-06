@@ -1,6 +1,5 @@
-import { data } from "../data/Data";
-
 export { InfoPane }
+import { data } from "../data/Data";
 
 // Components:
 
