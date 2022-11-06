@@ -1,8 +1,8 @@
 import { Helmet } from "react-helmet";
+import { Calendar } from "./components/Calendar";
+import { Layout } from "./components/Layout"
 import Split from 'react-split';
 import './App.css';
-
-import { Layout } from "./components/Layout"
 
 function App() {
 	return (
@@ -17,9 +17,7 @@ function App() {
 						gutterAlign="center"
 						direction="horizontal"
 						cursor="col-resize">
-						<div className="Calendar">
-							<h2>TODO: ADD CALENDAR</h2>
-						</div>
+						<Calendar />
 						<div className="InfoPane">
 							<h2>TODO: ADD INFO PANE</h2>
 						</div>
