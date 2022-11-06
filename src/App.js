@@ -18,8 +18,8 @@ const App = () => {
 					direction="horizontal"
 					allowResize="false"
 					cursor="col-resize">
-					<Calendar className="Calendar" />
-					<InfoPane className="InfoPane" />
+					<Calendar />
+					<InfoPane />
 				</Split>
 			</Layout>
 		</div>

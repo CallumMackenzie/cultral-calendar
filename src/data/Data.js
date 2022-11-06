@@ -1,7 +1,10 @@
+import * as rawData from "./holidays.json"
 
 export { data }
 
-const data = {
+const data = rawData;
+
+const data_test = {
 	holidays:
 		[
 			{

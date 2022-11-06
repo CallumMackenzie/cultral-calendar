@@ -28,7 +28,6 @@ const HolidayDigest = ({ name, date, digest, link, countries }) => {
 			<span className="digestName">{name}</span>
 			<span className="digestCountry">Observed in: {countriesStr}</span>
 			<span className="digestDate">{datesToDateRangeString(date)}</span>
-			<span className="digestDigest"></span>
 		</div>
 	</>);
 }

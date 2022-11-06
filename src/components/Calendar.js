@@ -9,15 +9,17 @@ export { Calendar }
 
 export default class Calendar extends Component {
 	render() {
+		console.log(data)
 		return (
 			<FullCalendar
+				className="Calendar"
 				defaultView="dayGridMonth"
 				plugins={[dayGridPlugin]}
 				events={data.holidays.map(e => {
 					const date = moment(e.date.replaceAll("-", ""), "YYYYMMDD");
 					const currentYear = moment().year(); // Make this current calendar year
 					const newDate = currentYear + "-" + (date.month() + 1) + "-" + date.date();
-					
+
 					return {
 						title: e.name,
 						date: newDate
