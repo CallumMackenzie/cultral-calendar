@@ -40,14 +40,34 @@
 	color: black;
 	border-radius: 1em;
 	padding: 1em;
-	text-align: center;
+	text-align: left;
 }
 
 .InfoPaneTitle span {
 	font-size: xx-large;
+	font-weight: bold;
 }
 
-.digest
+.InfoPaneItem {
+	align-items: flex-start;
+	display: grid;
+	text-align: left;
+	border-color: var(--ccbeige);
+	border-width: 3px;
+	border-style: solid;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	border-radius: 5px;
+	padding: 3px;
+}
+
+.digestName {
+	font-style: italic;
+	font-size: large;
+}
+.digestCountry {
+	font-size: medium;
+}
 
 .Calendar {
 	background-color: var(--ccbeige);
