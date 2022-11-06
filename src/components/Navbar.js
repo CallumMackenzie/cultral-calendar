@@ -1,3 +1,5 @@
+import github from "/image/github.png"
+
 export { Navbar }
 
 const Navbar = () => {
@@ -8,6 +10,7 @@ const Navbar = () => {
 			width: "100%",
 		}}>
 			<h2>Cultural Calendar</h2>
+			github
 		</div>
 	</>);
 }
