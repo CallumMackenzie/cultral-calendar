@@ -35,9 +35,23 @@
 .InfoPane {
 	background-color: var(--cclyellow);
 	display: flex;
+	color: black;
+	border-radius: 1em;
+	padding: 1em;
 }
 
 .Calendar {
 	background-color: var(--ccbeige);
 	display: flex;
+	color: black;
+}
+
+.gutter {
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+
+.gutter.gutter-horizontal {
+	background-image: url("/image/gutter.svg");
+	cursor: col-resize;
 }
