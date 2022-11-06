@@ -1,3 +1,11 @@
+:root {
+	--ccblue: #79ADDC;
+	--ccbeige: #FFC09F;
+	--ccyellow: #FFEE93;
+	--cclyellow: #FCF5C7;
+	--ccgreen: #ADF7B6;
+}
+
 .App {
 	text-align: center;
 }
@@ -14,7 +22,7 @@
 }
 
 .App-header {
-	background-color: #282c34;
+	background-color: var(--ccblue);
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -25,11 +33,11 @@
 }
 
 .InfoPane {
-	background-color: aqua;
+	background-color: var(--cclyellow);
 	display: flex;
 }
 
 .Calendar {
-	background-color: red;
+	background-color: var(--ccbeige);
 	display: flex;
 }
