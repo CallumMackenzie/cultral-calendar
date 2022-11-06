@@ -9,7 +9,11 @@ function App() {
 				<Helmet>
 					<title>Cultral Calendar</title>
 				</Helmet>
-				<Split>
+				<Split style={{ display: "flex" }}
+					gutterSize={10}
+					gutterAlign="center"
+					direction="horizontal"
+					cursor="col-resize">
 					<div className="Calendar">
 						<h2>TODO: ADD CALENDAR</h2>
 					</div>
