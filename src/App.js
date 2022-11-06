@@ -16,7 +16,6 @@ const App = () => {
 					gutterSize={10}
 					gutterAlign="center"
 					direction="horizontal"
-					allowResize="false"
 					cursor="col-resize">
 					<Calendar />
 					<InfoPane />
