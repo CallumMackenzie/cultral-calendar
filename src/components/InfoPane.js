@@ -18,16 +18,19 @@ const Title = ({ style }) => {
 		m = today.getMonth(),
 		y = today.getFullYear();
 	return (<>
-		<div className="Title" style={style}>
+		<div className="InfoPaneTitle" style={style}>
 			<span>{intDayToDay(d)} of {intMonthToMonth(m)}, {y}</span>
 		</div>
 	</>);
 }
 
 const HolidayDigest = ({ name, date, digest, link }) => {
+	const dates = date.split(",")
 	return (<>
-		<span>{name}</span>
-		<span></span>
+		<span className="digestName">{name}</span>
+		<span className="digestDate"></span>
+		<span className="digestDigest"></span>
+		// TODO: Link?
 	</>);
 }
 
