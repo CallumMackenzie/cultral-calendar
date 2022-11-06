@@ -3,6 +3,7 @@ import { Calendar } from "./components/Calendar";
 import { Layout } from "./components/Layout"
 import Split from 'react-split';
 import './App.css';
+import { InfoPane } from "./components/InfoPane";
 
 function App() {
 	return (
@@ -17,10 +18,8 @@ function App() {
 						gutterAlign="center"
 						direction="horizontal"
 						cursor="col-resize">
-						<Calendar />
-						<div className="InfoPane">
-							<h2>TODO: ADD INFO PANE</h2>
-						</div>
+						<Calendar className="Calendar"/>
+						<InfoPane className="InfoPane" />
 					</Split>
 				</Layout>
 			</header>
