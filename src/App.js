@@ -4,7 +4,7 @@ import { InfoPane } from "./components/InfoPane";
 import Split from 'react-split';
 import './App.css';
 
-function App() {
+const App = () => {
 	return (
 		<div className="App">
 			<Layout>
