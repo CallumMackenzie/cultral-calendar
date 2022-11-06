@@ -7,7 +7,7 @@ const Navbar = () => {
 			top: 0,
 			width: "100%",
 		}}>
-			<h2>Cultral Calendar</h2>
+			<h2>Cultural Calendar</h2>
 		</div>
 	</>);
 }
