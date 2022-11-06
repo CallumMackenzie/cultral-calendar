@@ -1,7 +1,7 @@
 export { InfoPane }
 
 const InfoPane = () => {
-	return <>
+	return (<>
 		<p>InfoPane here ...</p>
-	</>
+	</>);
 }

@@ -1,7 +1,7 @@
 export { Navbar }
 
 const Navbar = () => {
-	return <>
+	return (<>
 		<div style={{
 			position: "fixed",
 			top: 0,
@@ -9,5 +9,5 @@ const Navbar = () => {
 		}}>
 			<h2>Cultral Calendar</h2>
 		</div>
-	</>
+	</>);
 }

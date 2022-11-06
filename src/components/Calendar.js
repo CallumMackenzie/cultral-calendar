@@ -1,7 +1,7 @@
 export { Calendar }
 
 const Calendar = () => {
-	return <>
+	return (<>
 		<p>Calendar here ...</p>
-	</>
+	</>);
 }

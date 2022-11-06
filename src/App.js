@@ -18,7 +18,7 @@ function App() {
 						gutterAlign="center"
 						direction="horizontal"
 						cursor="col-resize">
-						<Calendar className="Calendar"/>
+						<Calendar className="Calendar" />
 						<InfoPane className="InfoPane" />
 					</Split>
 				</Layout>

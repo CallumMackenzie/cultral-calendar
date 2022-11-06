@@ -3,8 +3,8 @@ export { Layout }
 
 
 const Layout = ({ children }) => {
-	return <>
+	return (<>
 		<Navbar />
 		{children}
-	</>
+	</>);
 }
