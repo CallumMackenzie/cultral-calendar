@@ -72,6 +72,6 @@
 }
 
 .gutter.gutter-horizontal {
-	background-image: url("/image/gutter.svg");
+	background-image: url("/src/image/gutter.svg");
 	cursor: col-resize;
 }
