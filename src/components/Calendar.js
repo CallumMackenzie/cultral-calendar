@@ -23,7 +23,8 @@ export default class Calendar extends Component {
 
 					return {
 						title: e.name,
-						date: newDate
+						date: newDate,
+						url: "http://www.google.com/"
 					}
 				})}
 			/>
