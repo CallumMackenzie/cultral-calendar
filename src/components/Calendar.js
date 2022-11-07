@@ -13,7 +13,8 @@ export default class Calendar extends Component {
 		return (
 			<FullCalendar
 				className="Calendar"
-				defaultView="dayGridMonth"
+				defaultView="dayGridWeek"
+				initialView="dayGridWeek"
 				plugins={[dayGridPlugin]}
 				events={data.map(e => {
 					const date = moment(e.date.replaceAll("-", ""), "YYYYMMDD");
