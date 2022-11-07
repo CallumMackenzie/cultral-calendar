@@ -34,7 +34,12 @@ rawData.forEach(i => {
 });
 
 const data = Array.from(reducedData.values())
-	.filter(a => moment("2022" + a.date.substring(4), "YYYY-MM-DD").isAfter(moment()))
+	.filter(a => {
+		let newDate = moment("2022" + a.date.substring(4), "YYYY-MM-DD");
+		let now = moment();
+		let isToday = now.date() == newDate.date() && now.month() == newDate.month();
+		return isToday || newDate.isAfter(moment());
+	})
 	.sort((a, b) =>
 		moment(a.date, "YYYY-MM-DD").subtract(moment(b.date, "YYYY-MM-DD")).valueOf()
 	).concat(
