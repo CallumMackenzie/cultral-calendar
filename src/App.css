@@ -4,10 +4,19 @@
 	--ccyellow: #FFEE93;
 	--cclyellow: #FCF5C7;
 	--ccgreen: #ADF7B6;
+	--violet: #440381;
+	--pink: #AF3E4D;
+	--lightpink: #A97C73;
+	--lblue: #51E5FF;
+	--silk: #FFD6C0;
+	--background: #ffffff;
+	--infopane: #F7EDF0;
+	--outline: #000c3a;
+
 }
 
 body {
-	background-color: var(--ccblue);
+	background-color: var(--background);
 }
 
 .App {
@@ -18,11 +27,11 @@ body {
 	flex-direction: column;
 	align-items: center;
 	font-size: calc(10px + 2vmin);
-	color: white;
+	color: Black;
 }
 
 .InfoPane {
-	background-color: var(--cclyellow);
+	background-color: var(--infopane);
 	color: black;
 	border-radius: 1em;
 	padding: 1em;
@@ -39,7 +48,7 @@ body {
 .InfoPaneItem {
 	display: grid;
 	text-align: left;
-	border-color: var(--ccbeige);
+	border-color: var(--outline);
 	border-width: 3px;
 	border-style: solid;
 	margin-top: 3px;
@@ -57,7 +66,7 @@ body {
 }
 
 .Calendar {
-	background-color: var(--ccbeige);
+	background-color: var(white);
 	display: flex;
 	color: black;
 }
