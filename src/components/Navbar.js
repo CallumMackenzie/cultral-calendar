@@ -1,5 +1,6 @@
 import github from "../image/github.png"
 import logo from "../image/logo.png"
+import { RandomQuote, RandomHello } from "../data/Data"
 
 export { Navbar }
 
@@ -24,6 +25,8 @@ const Navbar = () => {
 				width: "90%",
 				textAlign: "start"
 			}}>Cultural Calendar</h2>
+			<p>{RandomHello()}</p>
+			<p>{RandomQuote()}</p>
 			<a href="https://github.com/CallumMackenzie/cultural-calendar">
 				<img style={{
 					width: "2em",

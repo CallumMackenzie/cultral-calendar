@@ -1,7 +1,7 @@
 import { jd as rawData } from "./holiday_json"
 import moment from "moment";
 
-export { data }
+export { data, RandomQuote, RandomHello }
 
 const testData =
 	[
@@ -31,3 +31,38 @@ const testData =
 const data = rawData.sort((a, b) => {
 	moment(a.date, "YYYY-MM-DD").subtract(moment(b.date, "YYYY-MM-DD"))
 });
+
+const RandomQuote = () => {
+
+	const PositiveQuotes = ["You are doing amazing!",
+		"Drink some water!",
+		"You look gorgeous today!",
+		"Have aN AMAZING day!",
+		"Did you get enough sleep?",
+		"Did you eat well?",
+		"Being kind is cool!",
+		"You are perfect!",
+		"You are enough!",
+		"You are doing so good!",
+		"I'm proud of you!",
+		"How was your day today?",
+		"Remeber to take a day off!"];
+
+	return PositiveQuotes[Math.floor(Math.random() * PositiveQuotes.length)];
+};
+
+const RandomHello = () => {
+
+	const Hello = ["Hello",
+		"hola",
+        "Bonjour",
+        "Ciao",
+	"Haai!",
+"salve",
+"konnichiwa",
+"salve",
+"guten tag",
+"guten tag"]
+
+	return Hello[Math.floor(Math.random() * Hello.length)];
+};
