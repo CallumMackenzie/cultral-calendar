@@ -34,7 +34,6 @@ const data = rawData.filter(a => moment("2022" + a.date.substring(4), "YYYY-MM-D
 	).concat(rawData.filter(a => moment(a.date, "YYYY-MM-DD").isBefore(moment())));
 
 const RandomQuote = () => {
-
 	const PositiveQuotes = ["You are doing amazing!",
 		"Drink some water!",
 		"You look gorgeous today!",
@@ -53,17 +52,16 @@ const RandomQuote = () => {
 };
 
 const RandomHello = () => {
-
 	const Hello = ["Hello",
 		"hola",
-        "Bonjour",
-        "Ciao",
-	"Haai!",
-"salve",
-"konnichiwa",
-"salve",
-"guten tag",
-"guten tag"]
+		"Bonjour",
+		"Ciao",
+		"Haai!",
+		"salve",
+		"konnichiwa",
+		"salve",
+		"guten tag",
+		"guten tag"]
 
 	return Hello[Math.floor(Math.random() * Hello.length)];
 };
