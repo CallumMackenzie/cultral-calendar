@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/cultural-calendar/static/css/main.8121b0bc.css",
+    "main.css": "/cultural-calendar/static/css/main.a993bab9.css",
     "main.js": "/cultural-calendar/static/js/main.dc4b6ee1.js",
     "static/js/787.536462c7.chunk.js": "/cultural-calendar/static/js/787.536462c7.chunk.js",
     "static/media/logo.png": "/cultural-calendar/static/media/logo.3e3067e4cf8956754465.png",
     "index.html": "/cultural-calendar/index.html",
     "static/media/gutter.svg": "/cultural-calendar/static/media/gutter.82b8ca150ddd4b5977f1.svg",
-    "main.8121b0bc.css.map": "/cultural-calendar/static/css/main.8121b0bc.css.map",
+    "main.a993bab9.css.map": "/cultural-calendar/static/css/main.a993bab9.css.map",
     "main.dc4b6ee1.js.map": "/cultural-calendar/static/js/main.dc4b6ee1.js.map",
     "787.536462c7.chunk.js.map": "/cultural-calendar/static/js/787.536462c7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8121b0bc.css",
+    "static/css/main.a993bab9.css",
     "static/js/main.dc4b6ee1.js"
   ]
 }
