@@ -1,7 +1,7 @@
 import { jd as rawData } from "./holiday_json"
 import moment from "moment";
 
-export { data }
+export { data, randomQuote, randomHello }
 
 const testData =
 	[
@@ -28,6 +28,50 @@ const testData =
 		}
 	];
 
-const data = rawData.sort((a, b) => {
-	moment(a.date, "YYYY-MM-DD").subtract(moment(b.date, "YYYY-MM-DD"))
+let reducedData = new Map();
+rawData.forEach(i => {
+	reducedData.set(i.name.toLocaleLowerCase().trim(), i);
 });
+
+const data = Array.from(reducedData.values())
+	.filter(a => moment("2022" + a.date.substring(4), "YYYY-MM-DD").isAfter(moment()))
+	.sort((a, b) =>
+		moment(a.date, "YYYY-MM-DD").subtract(moment(b.date, "YYYY-MM-DD")).valueOf()
+	).concat(
+		rawData.filter(a => moment(a.date, "YYYY-MM-DD").isBefore(moment()))
+			.sort((a, b) =>
+				moment(a.date, "YYYY-MM-DD").subtract(moment(b.date, "YYYY-MM-DD")).valueOf()
+			));
+
+const randomQuote = () => {
+	const positiveQuotes = ["You are doing amazing!",
+		"Drink some water!",
+		"You look gorgeous today!",
+		"Have aN AMAZING day!",
+		"Did you get enough sleep?",
+		"Did you eat well?",
+		"Being kind is cool!",
+		"You are perfect!",
+		"You are enough!",
+		"You are doing so good!",
+		"I'm proud of you!",
+		"How was your day today?",
+		"Remeber to take a day off!"];
+
+	return positiveQuotes[Math.floor(Math.random() * positiveQuotes.length)];
+};
+
+const randomHello = () => {
+	const hello = ["Hello!",
+		"Gola!",
+		"Bonjour!",
+		"Ciao!",
+		"Haai!",
+		"Salve!",
+		"Konnichiwa!",
+		"Salve!",
+		"Guten tag!",
+		"Guten tag!"]
+
+	return hello[Math.floor(Math.random() * hello.length)];
+};
