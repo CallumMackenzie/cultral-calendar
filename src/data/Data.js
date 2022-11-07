@@ -1,7 +1,7 @@
 import { jd as rawData } from "./holiday_json"
 import moment from "moment";
 
-export { data, RandomQuote, RandomHello }
+export { data, randomQuote, randomHello }
 
 const testData =
 	[
@@ -33,7 +33,7 @@ const data = rawData.filter(a => moment("2022" + a.date.substring(4), "YYYY-MM-D
 		moment(a.date, "YYYY-MM-DD").subtract(moment(b.date, "YYYY-MM-DD")).valueOf()
 	).concat(rawData.filter(a => moment(a.date, "YYYY-MM-DD").isBefore(moment())));
 
-const RandomQuote = () => {
+const randomQuote = () => {
 	const PositiveQuotes = ["You are doing amazing!",
 		"Drink some water!",
 		"You look gorgeous today!",
@@ -51,7 +51,7 @@ const RandomQuote = () => {
 	return PositiveQuotes[Math.floor(Math.random() * PositiveQuotes.length)];
 };
 
-const RandomHello = () => {
+const randomHello = () => {
 	const Hello = ["Hello",
 		"hola",
 		"Bonjour",

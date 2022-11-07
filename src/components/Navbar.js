@@ -22,11 +22,17 @@ const Navbar = () => {
 			<h2 style={{
 				display: "inline",
 				paddingLeft: "0.5em",
-				width: "90%",
+				width: "60%",
 				textAlign: "start"
 			}}>Cultural Calendar</h2>
-			<p>{RandomHello()}</p>
-			<p>{RandomQuote()}</p>
+			<p style={{
+				paddingLeft: "0.5em",
+				paddingRight: "0.5em"
+			}}>{randomHello()}</p>
+			<p style={{
+				paddingLeft: "0.5em",
+				paddingRight: "0.5em"
+			}}>{randomQuote()}</p>
 			<a href="https://github.com/CallumMackenzie/cultural-calendar">
 				<img style={{
 					width: "2em",
