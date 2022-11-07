@@ -1,6 +1,6 @@
 import github from "../image/github.png"
 import logo from "../image/logo.png"
-import { RandomQuote, RandomHello } from "../data/Data"
+import { randomQuote, randomHello } from "../data/Data"
 
 export { Navbar }
 

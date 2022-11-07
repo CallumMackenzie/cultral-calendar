@@ -28,13 +28,23 @@ const testData =
 		}
 	];
 
-const data = rawData.filter(a => moment("2022" + a.date.substring(4), "YYYY-MM-DD").isAfter(moment()))
+let reducedData = new Map();
+rawData.forEach(i => {
+	reducedData.set(i.name.toLocaleLowerCase().trim(), i);
+});
+
+const data = Array.from(reducedData.values())
+	.filter(a => moment("2022" + a.date.substring(4), "YYYY-MM-DD").isAfter(moment()))
 	.sort((a, b) =>
 		moment(a.date, "YYYY-MM-DD").subtract(moment(b.date, "YYYY-MM-DD")).valueOf()
-	).concat(rawData.filter(a => moment(a.date, "YYYY-MM-DD").isBefore(moment())));
+	).concat(
+		rawData.filter(a => moment(a.date, "YYYY-MM-DD").isBefore(moment()))
+			.sort((a, b) =>
+				moment(a.date, "YYYY-MM-DD").subtract(moment(b.date, "YYYY-MM-DD")).valueOf()
+			));
 
 const randomQuote = () => {
-	const PositiveQuotes = ["You are doing amazing!",
+	const positiveQuotes = ["You are doing amazing!",
 		"Drink some water!",
 		"You look gorgeous today!",
 		"Have aN AMAZING day!",
@@ -48,20 +58,20 @@ const randomQuote = () => {
 		"How was your day today?",
 		"Remeber to take a day off!"];
 
-	return PositiveQuotes[Math.floor(Math.random() * PositiveQuotes.length)];
+	return positiveQuotes[Math.floor(Math.random() * positiveQuotes.length)];
 };
 
 const randomHello = () => {
-	const Hello = ["Hello",
-		"hola",
-		"Bonjour",
-		"Ciao",
+	const hello = ["Hello!",
+		"Gola!",
+		"Bonjour!",
+		"Ciao!",
 		"Haai!",
-		"salve",
-		"konnichiwa",
-		"salve",
-		"guten tag",
-		"guten tag"]
+		"Salve!",
+		"Konnichiwa!",
+		"Salve!",
+		"Guten tag!",
+		"Guten tag!"]
 
-	return Hello[Math.floor(Math.random() * Hello.length)];
+	return hello[Math.floor(Math.random() * hello.length)];
 };
