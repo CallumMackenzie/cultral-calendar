@@ -23,7 +23,7 @@ export default class Calendar extends Component {
 					return {
 						title: e.name,
 						date: newDate
-					};
+					}
 				})}
 			/>
 		)
