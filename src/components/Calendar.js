@@ -15,7 +15,7 @@ export default class Calendar extends Component {
 				className="Calendar"
 				defaultView="dayGridMonth"
 				plugins={[dayGridPlugin]}
-				events={data.holidays.map(e => {
+				events={data.map(e => {
 					const date = moment(e.date.replaceAll("-", ""), "YYYYMMDD");
 					const currentYear = moment().year(); // Make this current calendar year
 					const newDate = currentYear + "-" + (date.month() + 1) + "-" + date.date();

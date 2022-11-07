@@ -8,14 +8,14 @@ const InfoPane = () => {
 	return (<>
 		<div className="InfoPane">
 			<Title />
-			{data.holidays.map(holiday => HolidayDigest(holiday))}
+			{data.map(holiday => HolidayDigest(holiday))}
 		</div>
 	</>);
 }
 
-const Title = ({ style }) => {
+const Title = () => {
 	return (<>
-		<div className="InfoPaneTitle" style={style}>
+		<div className="InfoPaneTitle">
 			<span>{moment().format("LL")}</span>
 		</div>
 	</>);
