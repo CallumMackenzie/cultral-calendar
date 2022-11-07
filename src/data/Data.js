@@ -28,6 +28,7 @@ const testData =
 		}
 	];
 
-const data = rawData.sort((a, b) => {
-	moment(a.date, "YYYY-MM-DD").subtract(moment(b.date, "YYYY-MM-DD"))
-});
+const data = rawData.filter(a => moment("2022" + a.date.substring(4), "YYYY-MM-DD").isAfter(moment()))
+	.sort((a, b) =>
+		moment(a.date, "YYYY-MM-DD").subtract(moment(b.date, "YYYY-MM-DD")).valueOf()
+	).concat(rawData.filter(a => moment(a.date, "YYYY-MM-DD").isBefore(moment())));
